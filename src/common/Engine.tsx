@@ -1,15 +1,15 @@
-import {HeadlessEngine, searchAppReducers} from '@coveo/headless';
+import { HeadlessEngine, searchAppReducers } from '@coveo/headless';
 
 export async function getSearchToken() {
   const res = await fetch(process.env.REACT_APP_TOKEN_ENDPOINT!);
-  const {token} = await res.json();
+  const { token } = await res.json();
   return token;
 }
 
 export async function initializeHeadlessEngine() {
   return new HeadlessEngine({
     configuration: {
-      platformUrl: process.env.REACT_APP_PLATFORM_URL,
+      platformUrl: process.env.REACT_APP_PLATFORM_URL, // This is where you can connect the headless engine to your middleware!
       organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
       accessToken: await getSearchToken(),
       renewAccessToken: getSearchToken,
