@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import SearchBox from './SearchBox';
-import QuerySummary from './QuerySummary';
 import ResultList from './ResultList';
 import {AnalyticsActions, SearchActions, Engine} from '@coveo/headless';
 import {EngineProvider} from '../common/engineContext';
@@ -35,11 +34,6 @@ const SearchPage: React.FunctionComponent<ISearchPageProps> = (props) => {
           <Grid container>
             <Grid item md={9} sm={12}>
               <Box pl={3}>
-                <Grid container alignItems="flex-end">
-                  <Grid item md={10}>
-                    <QuerySummary />
-                  </Grid>
-                </Grid>
                 <ResultList />
               </Box>
             </Grid>
