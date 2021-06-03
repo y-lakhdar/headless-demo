@@ -12,6 +12,9 @@ In the project directory, you can run:
 
 ### `yarn start`
 
+> Notes
+> Make sure to open the src/common/Engine.tsx file to connect your web app to an endpoint other than the Coveo platform
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
